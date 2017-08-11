@@ -1,0 +1,6 @@
+\contentsline {chapter}{\numberline {1}Introduction}{5}{chapter.1}
+\contentsline {section}{\numberline {1.1}Motivation}{6}{section.1.1}
+\contentsline {section}{\numberline {1.2}Overview and goals}{6}{section.1.2}
+\contentsline {section}{\numberline {1.3}My Contributions}{6}{section.1.3}
+\contentsline {chapter}{List of Figures}{11}{chapter*.2}
+\contentsline {chapter}{Bibliography}{13}{chapter*.3}

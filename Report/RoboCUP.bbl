@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{BHumanCodeRelease2015}
+Thomas R{\"o}fer, Tim Laue, Jesse Richter-Klug, Maik Sch{\"u}nemann, Jonas
+  Stiensmeier, Andreas Stolpmann, Alexander St{\"o}wing, and Felix Thielke.
+\newblock {B}-{H}uman team report and code release 2015, 2015.
+\newblock Only available online:
+  \url{http://www.b-human.de/downloads/publications/2015/CodeRelease2015.pdf}.
+
+\bibitem{robotumwiki}
+RoboTUM.
+\newblock Robosoccer wiki.
+\newblock \url{https://gitlab.lrz.de/ga68hom/RoboCup/wikis/home}.
+
+\bibitem{BHumanCodeRelease2013}
+Thomas R{\"o}fer, Tim Laue, Judith M{\"u}ller, Michel Bartsch, Malte~Jonas
+  Batram, Arne B{\"o}ckmann, Martin B{\"o}schen, Martin Kroker, Florian
+  Maa{\ss}, Thomas M{\"u}nder, Marcel Steinbeck, Andreas Stolpmann, Simon
+  Taddiken, Alexis Tsogias, and Felix Wenk.
+\newblock B-human team report and code release 2013, 2013.
+\newblock Only available online:
+  \url{http://www.b-human.de/downloads/publications/2013/CodeRelease2013.pdf}.
+
+\bibitem{Rules}
+RoboCup~Technical Committee et~al.
+\newblock Robocup standard platform league (nao) rule book, 2016.
+\newblock Only available online:
+  \url{www.tzi.de/spl/pub/Website/Downloads/Rules2016.pdf}.
+
+\end{thebibliography}

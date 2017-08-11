@@ -1,0 +1,102 @@
+\documentclass[ICS, PP, english, final]{ICS_thesis}
+\graphicspath{{pics/}{logos/}}
+
+
+%_________MACROS_________ (optional and customizable - see output)
+\input{./include/packages.tex}
+\input{./include/macros.tex}
+%_______Start_Document______________________________________
+\begin{document}
+
+
+\title{RoboCup SS17}
+
+\student{B.Sc. Tianming Qiu} 			%% your name
+\yearofbirth{30.03.1993}	%% date of birth
+\street{Felsennelkenanger 15}			%% your address
+\city{80937, Munich}								%		"
+\phone{+49 17643387325}			%% your telephone-no.
+\supervisor{Mohsen Kaboli}			%% your supervisor
+\start{24.04.2017}						%% start date
+\finalrep{24.07.2017}						%% final presentation / date
+
+\maketitle
+
+
+
+% ________Abstract__________________________________________-
+\topmargin5mm
+\textheight220mm
+\pagenumbering{arabic}
+\phantom{u}
+\begin{abstract}
+RoboCup is a competition for soccer robot held annually, which aims at promoting researches on robot and artificial intelligence. We work on the RoboCup Standard Platform League (SPL) by using humanoid robot NAO, based on the code framework from University of Bremen's team BHuman.
+
+Self-localization is a very important task for NAO during the game. The action decisions, ball tracking and different team cooperation strategies are dependent on the precise location on the standard soccer field. Self-localization is also related computer vision and statistical signal processing. These topics are the foundations of autonomous robot. So this semester I focus on figuring it out, how does NAO localize itself on the soccer field by cameras and how could it be improved.
+
+The current method in BHuman framework has been continuously developed, verified and implemented for several years and it has been considered as state-of-the-art method which is already very robust and compact. The main idea is to apply particle filter to estimate robot pose. But there are still some issues that when robot is walking, some shake noises from camera will cause deviations in visual odometry.
+\end{abstract}
+
+
+% %%%%%%%%%%%%%%%%%%%%% Widmung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantom{u}
+\phantom{1}\vspace{6cm}
+\begin{center}
+%Hier die Widmung oder leer lassen
+\end{center}
+
+
+\pagestyle{fancy}
+
+%%%%%%%%%%%%%%%%%%%Inhaltsverzeichnis%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ACTUAL CONTENT OF YOUR WORK %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% Kapitel - externe Dateien zur Ordnung%%%%%%%%%%%%%
+\input{./chapters/Introduction.tex}
+
+% \appendix
+% 	\input{./chapters/Appendix.tex}
+
+%%%%%%%%%%%%%%%%%%Acknoledgments %%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\chapter*{Acknowledgments}
+\markright{ACKNOWLEDGMENTS}
+I would like to express my gratitude to:
+
+\begin{itemize}
+	\item Professor Cheng and Professor Lee for offering this course and all the hardware support
+	\item Pablo, Marion, Stefan and Professor Dirk for their nice introduction lectures
+	\item Our daily supervisor, Matteo and Mohsen, for helping us whenever we get stuck and leading us towards the final presentation
+	\item My team members, Sebastian, Benno and Ahmed for the team spirit and the fun we have during so many Tuesdays, Wednesday, Fridays and even weekends
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%_Abbildungsverzeichnis %%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\addcontentsline{toc}{chapter}{List of Figures}
+\listoffigures
+
+% %%%%%%%%%%%%%%%%%%_Acronyms and Notations %%%%%%%%%%%%%%%%%%%%%%
+% \cleardoublepage
+% \chapter*{Acronyms and Notations}
+% \input{./include/acronyms.tex}
+
+%%%%%%%%%%%%%%%%%%Literaturverzeichnis %%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{mybib}
+\bibliographystyle{unsrt}
+
+%%%%%%%%%%%%%%%%%%%%License %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\chapter*{License}
+\markright{LICENSE}
+This work is licensed under the Creative Commons Attribution 3.0 Germany
+License. To view a copy of this license,
+visit \href{http://creativecommons.org/licenses/by/3.0/de/}{http://creativecommons.org} or send a letter
+to Creative Commons, 171 Second Street, Suite 300, San
+Francisco, California 94105, USA.
+
+\end{document}
