@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.6.11)  11 AUG 2017 11:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2017.6.11)  12 AUG 2017 11:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -514,12 +514,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 ]
 Chapter 1.
-<pics/NAO.png, id=60, 393.72093pt x 262.73157pt>
+<pics/NAO.png, id=46, 393.72093pt x 262.73157pt>
 File: pics/NAO.png Graphic file (type png)
  <use pics/NAO.png>
 Package pdftex.def Info: pics/NAO.png used on input line 6.
 (pdftex.def)             Requested size: 256.0774pt x 170.88173pt.
  [5 <./pics/NAO.png>]
+
+LaTeX Warning: Citation `BHumanCodeRelease2015' on page 6 undefined on input li
+ne 18.
+
 
 LaTeX Warning: Reference `Chap:Quick' on page 6 undefined on input line 21.
 
@@ -535,26 +539,114 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 LaTeX Warning: Reference `Chap:Imp' on page 7 undefined on input line 34.
 
-) [7] [8
+) (./chapters/Improvement.tex [7] [8
 
-] [9
+]
+Chapter 2.
+[9] <pics/SPL.png, id=74, 692.5875pt x 289.08pt>
+File: pics/SPL.png Graphic file (type png)
+ <use pics/SPL.png>
+Package pdftex.def Info: pics/SPL.png used on input line 17.
+(pdftex.def)             Requested size: 384.10959pt x 160.3266pt.
 
-] [10
 
-] (./RoboCUP.lof)
+LaTeX Warning: Reference `fig: TUM' on page 10 undefined on input line 22.
+
+
+LaTeX Warning: Citation `BHumanCodeRelease2015' on page 10 undefined on input l
+ine 22.
+
+<pics/TUM.png, id=75, 653.44125pt x 272.51813pt>
+File: pics/TUM.png Graphic file (type png)
+ <use pics/TUM.png>
+Package pdftex.def Info: pics/TUM.png used on input line 25.
+(pdftex.def)             Requested size: 426.79134pt x 177.99129pt.
+
+
+LaTeX Warning: Reference `fig: DeFloCha' on page 10 undefined on input line 32.
+
+
+
+LaTeX Warning: Reference `fig: DeFloCha' on page 10 undefined on input line 32.
+
+
+
+LaTeX Warning: Reference `fig: DeFloCha' on page 10 undefined on input line 32.
+
+
+<pics/St_DA.png, id=76, 896.8707pt x 1127.55653pt>
+File: pics/St_DA.png Graphic file (type png)
+ <use pics/St_DA.png>
+Package pdftex.def Info: pics/St_DA.png used on input line 35.
+(pdftex.def)             Requested size: 341.43436pt x 429.25017pt.
+
+[10
+
+ <./pics/SPL.png>]
+
+LaTeX Warning: Reference `fig: DefFix' on page 11 undefined on input line 44.
+
+<pics/Dy_DA.png, id=84, 1317.62663pt x 1170.48492pt>
+File: pics/Dy_DA.png Graphic file (type png)
+ <use pics/Dy_DA.png>
+Package pdftex.def Info: pics/Dy_DA.png used on input line 50.
+(pdftex.def)             Requested size: 426.79134pt x 379.13503pt.
+
+[11 <./pics/TUM.png>]
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 60.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) [12 <./pics/St_DA.png>] [13 <./pics/Dy_DA.png>]
+
+LaTeX Warning: Reference `fig: StaStrik' on page 14 undefined on input line 64.
+
+
+
+LaTeX Warning: Reference `fig: StaStrik' on page 14 undefined on input line 64.
+
+
+<pics/St_Striker.png, id=108, 610.6815pt x 720.7728pt>
+File: pics/St_Striker.png Graphic file (type png)
+
+<use pics/St_Striker.png>
+Package pdftex.def Info: pics/St_Striker.png used on input line 69.
+(pdftex.def)             Requested size: 298.75262pt x 352.62085pt.
+
+
+LaTeX Warning: Reference `fig: StaStrik' on page 14 undefined on input line 75.
+
+
+
+LaTeX Warning: Reference `fig: DyStrik' on page 14 undefined on input line 78.
+
+<pics/Dy_Striker.png, id=109, 986.4855pt x 834.7185pt>
+File: pics/Dy_Striker.png Graphic file (type png)
+
+<use pics/Dy_Striker.png>
+Package pdftex.def Info: pics/Dy_Striker.png used on input line 81.
+(pdftex.def)             Requested size: 426.79134pt x 361.12541pt.
+
+
+LaTeX Warning: Reference `fig: DyStrik' on page 14 undefined on input line 87.
+
+) [14
+
+ <./pics/St_Striker.png>] [15 <./pics/Dy_Striker.png>] [16
+
+] [17
+
+] [18
+
+]
+(./RoboCUP.lof)
 \tf@lof=\write7
 \openout7 = `RoboCUP.lof'.
 
- [11
+ [19
 
-] [12
+] [20
 
 ] (./RoboCUP.bbl
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 8.
-
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1pcr.fd
-File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
-)
 Underfull \hbox (badness 1424) in paragraph at lines 4--9
 \OT1/cmr/m/n/12 Stiens-meier, An-dreas Stolp-mann, Alexan-der St^^?owing, and F
 e-lix Thielke.
@@ -584,36 +676,45 @@ Underfull \hbox (badness 1259) in paragraph at lines 16--23
  Malte Jonas
  []
 
-) [13
+) [21
 
-] [14
+] [22
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 102.
- [15
+ [23
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 102.
  (./RoboCUP.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 102.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 102.
-Package rerunfilecheck Info: File `RoboCUP.out' has not changed.
-(rerunfilecheck)             Checksum: 54DFEF33D55232764F347BFEAADBF9CC;328.
 
+
+Package rerunfilecheck Warning: File `RoboCUP.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `RoboCUP.out':
+(rerunfilecheck)             Before: B217B1A132D3A061038888FCD6AD7455;229
+(rerunfilecheck)             After:  49AB3D34E5F6A250C3FAFB9D47D4AE96;1027.
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
 
 LaTeX Warning: There were undefined references.
 
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 102.
  ) 
 Here is how much of TeX's memory you used:
- 9201 strings out of 493304
- 129395 string characters out of 6139871
- 250857 words of memory out of 5000000
- 12457 multiletter control sequences out of 15000+600000
- 13338 words of font info for 45 fonts, out of 8000000 for 9000
+ 9272 strings out of 493304
+ 130429 string characters out of 6139871
+ 251857 words of memory out of 5000000
+ 12495 multiletter control sequences out of 15000+600000
+ 13645 words of font info for 46 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  36i,11n,56p,844b,430s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
@@ -624,10 +725,10 @@ t/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts
 /public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/c
 ourier/ucrr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8
 a.pfb>
-Output written on RoboCUP.pdf (16 pages, 416691 bytes).
+Output written on RoboCUP.pdf (24 pages, 5679806 bytes).
 PDF statistics:
- 164 PDF objects out of 1000 (max. 8388607)
- 135 compressed objects within 2 object streams
- 30 named destinations out of 1000 (max. 500000)
- 54 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 218 PDF objects out of 1000 (max. 8388607)
+ 171 compressed objects within 2 object streams
+ 54 named destinations out of 1000 (max. 500000)
+ 68 words of extra memory for PDF output out of 10000 (max. 10000000)
 
