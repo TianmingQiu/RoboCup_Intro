@@ -24,7 +24,7 @@ The posterior of each particle $x_t^{m} (with 1 \leq m \leq M)$ is the probalbil
 \end{figure}
 
 \section{Combination with Unscented Kalman Filter}
-Since 2012, B-Human framewrok made a big change on self-localization: a combination of a particle filter and an Unscented Kalman filter is used.
+Since 2012, B-Human framework made a big change on self-localization: a combination of a particle filter and an Unscented Kalman filter is used.
 The former computes a global position estimate; the latter performs local tracking for refining the global estimate \cite{BHumanCodeRelease2012}. 
 This implementation will improve the local accuracy of particle filter and further results in improvement of localization precision. The change has shown in the \fref{Ffc.sub.2}. 
 
