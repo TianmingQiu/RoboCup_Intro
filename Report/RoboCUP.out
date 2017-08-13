@@ -2,9 +2,17 @@
 \BOOKMARK [1][-]{section.1.1}{Motivation}{chapter.1}% 2
 \BOOKMARK [1][-]{section.1.2}{Overview and goals}{chapter.1}% 3
 \BOOKMARK [1][-]{section.1.3}{My Contributions}{chapter.1}% 4
-\BOOKMARK [0][-]{chapter.2}{Improvement of Visual Odometry}{}% 5
+\BOOKMARK [0][-]{chapter.2}{Role: Denfeder State machine}{}% 5
 \BOOKMARK [1][-]{section.2.1}{The current method}{chapter.2}% 6
 \BOOKMARK [2][-]{subsection.2.1.1}{Visual odometry procedure}{section.2.1}% 7
 \BOOKMARK [2][-]{subsection.2.1.2}{Current problem}{section.2.1}% 8
-\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 9
-\BOOKMARK [0][-]{chapter*.3}{Bibliography}{}% 10
+\BOOKMARK [0][-]{chapter.3}{Self-Localization}{}% 9
+\BOOKMARK [1][-]{section.3.1}{The current method}{chapter.3}% 10
+\BOOKMARK [2][-]{subsection.3.1.1}{Visual odometry procedure}{section.3.1}% 11
+\BOOKMARK [2][-]{subsection.3.1.2}{Current problem}{section.3.1}% 12
+\BOOKMARK [0][-]{chapter.4}{Improvement of Visual Odometry}{}% 13
+\BOOKMARK [1][-]{section.4.1}{The current method}{chapter.4}% 14
+\BOOKMARK [2][-]{subsection.4.1.1}{Visual odometry procedure}{section.4.1}% 15
+\BOOKMARK [2][-]{subsection.4.1.2}{Current problem}{section.4.1}% 16
+\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 17
+\BOOKMARK [0][-]{chapter*.3}{Bibliography}{}% 18

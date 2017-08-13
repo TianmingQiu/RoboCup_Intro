@@ -1,0 +1,16 @@
+\chapter{Self-Localization}\label{Chap:PF}
+This chapter introduces the concrete method used in the current framework for NAO, the mobile roboter lacalization. RoboCup self-localization is a problem that NAO robot could determine its pose, which includes both position and angular, relative to the given map of the standard soccer field. Almost all the tasks for each robot player require knowledge of its pose on the field. We call this problem as rather a self-localization than a SLAM(Simultaneous localization and mapping) problem, one important reason is the map of the environment has been provided as prior knowledges. Self-localization could be treated as a problem of coordinate transformation. Map of the field or environment is described as the global coordinate system, which does not rely on robot's pose. The robot pose will be finally transformed into the global frame and represented as a global coordiante\cite{thrun2005probabilistic}. In our project the NAO pose is only changes in a plane, the $z$ element is always remains as zero since the robot always stands firmly on the ground. So the pose could be written as $(x,y,\theta)^T$.
+
+However, the pose of robot could not be aquired directly, instead it could be inferred from the sensor data, which here come from camera. The sensor could not be hundred percentage accurate, it alway contains noise, especially image processing by using camera. So we have to find a proper method to calculate the pose from imperfect sensor data, which will be introduced in this chapter.
+
+\clearpage
+\section{The current method}
+\subsection{Visual odometry procedure}
+ave been finished.
+
+
+So we could get the corresponding goal post coordinate in the ideal camera frame. Since we know the geometrical value of NAO's body construction, we can transform the coordinates into the robot frame, which is shown in the figure % coordinate transform
+Based on this, we could get the related distance between robot and the goal post in robot frame. At the same time, the pricise location of goal post in the global field is also known. So we could calculate the robot pose from this above information. % show the calculation procedure
+
+\subsection{Current problem}
+In the process of transforming the coordinate from camera frame into robot frame, the current method only use a constant transform. However

@@ -1,0 +1,13 @@
+\chapter{Role: Denfeder State machine}\label{Chap:StateM}
+This chapter introduces concrete method used in current framework for NAO, the mobile roboter lacalization. 
+\clearpage
+\section{The current method}
+\subsection{Visual odometry procedure}
+ave been finished.
+
+
+So we could get the corresponding goal post coordinate in the ideal camera frame. Since we know the geometrical value of NAO's body construction, we can transform the coordinates into the robot frame, which is shown in the figure % coordinate transform
+Based on this, we could get the related distance between robot and the goal post in robot frame. At the same time, the pricise location of goal post in the global field is also known. So we could calculate the robot pose from this above information. % show the calculation procedure
+
+\subsection{Current problem}
+In the process of transforming the coordinate from camera frame into robot frame, the current method only use a constant transform. However
