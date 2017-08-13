@@ -7,12 +7,11 @@
 \contentsline {subsection}{\numberline {2.1.1}Visual odometry procedure}{10}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Current problem}{10}{subsection.2.1.2}
 \contentsline {chapter}{\numberline {3}Self-Localization}{11}{chapter.3}
-\contentsline {section}{\numberline {3.1}The current method}{12}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Visual odometry procedure}{12}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Current problem}{12}{subsection.3.1.2}
-\contentsline {chapter}{\numberline {4}Improvement of Visual Odometry}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}The current method}{14}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Visual odometry procedure}{14}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Current problem}{15}{subsection.4.1.2}
-\contentsline {chapter}{List of Figures}{19}{chapter*.2}
-\contentsline {chapter}{Bibliography}{21}{chapter*.3}
+\contentsline {section}{\numberline {3.1}General Framework: Particle Filter}{11}{section.3.1}
+\contentsline {section}{\numberline {3.2}Unscented Kalman Filter}{13}{section.3.2}
+\contentsline {chapter}{\numberline {4}Improvement of Visual Odometry}{15}{chapter.4}
+\contentsline {section}{\numberline {4.1}The current method}{16}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Visual odometry procedure}{16}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Current problem}{17}{subsection.4.1.2}
+\contentsline {chapter}{List of Figures}{21}{chapter*.2}
+\contentsline {chapter}{Bibliography}{23}{chapter*.3}

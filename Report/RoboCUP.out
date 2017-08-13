@@ -7,12 +7,11 @@
 \BOOKMARK [2][-]{subsection.2.1.1}{Visual odometry procedure}{section.2.1}% 7
 \BOOKMARK [2][-]{subsection.2.1.2}{Current problem}{section.2.1}% 8
 \BOOKMARK [0][-]{chapter.3}{Self-Localization}{}% 9
-\BOOKMARK [1][-]{section.3.1}{The current method}{chapter.3}% 10
-\BOOKMARK [2][-]{subsection.3.1.1}{Visual odometry procedure}{section.3.1}% 11
-\BOOKMARK [2][-]{subsection.3.1.2}{Current problem}{section.3.1}% 12
-\BOOKMARK [0][-]{chapter.4}{Improvement of Visual Odometry}{}% 13
-\BOOKMARK [1][-]{section.4.1}{The current method}{chapter.4}% 14
-\BOOKMARK [2][-]{subsection.4.1.1}{Visual odometry procedure}{section.4.1}% 15
-\BOOKMARK [2][-]{subsection.4.1.2}{Current problem}{section.4.1}% 16
-\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 17
-\BOOKMARK [0][-]{chapter*.3}{Bibliography}{}% 18
+\BOOKMARK [1][-]{section.3.1}{General Framework: Particle Filter}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.2}{Unscented Kalman Filter}{chapter.3}% 11
+\BOOKMARK [0][-]{chapter.4}{Improvement of Visual Odometry}{}% 12
+\BOOKMARK [1][-]{section.4.1}{The current method}{chapter.4}% 13
+\BOOKMARK [2][-]{subsection.4.1.1}{Visual odometry procedure}{section.4.1}% 14
+\BOOKMARK [2][-]{subsection.4.1.2}{Current problem}{section.4.1}% 15
+\BOOKMARK [0][-]{chapter*.2}{List of Figures}{}% 16
+\BOOKMARK [0][-]{chapter*.3}{Bibliography}{}% 17

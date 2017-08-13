@@ -2,4 +2,7 @@
 \contentsline {figure}{\numberline {1.1}{\ignorespaces NAO robots}}{5}{figure.1.1}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Self-localization based on particle filter flowchart}}{12}{figure.3.1}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Particle filter}}}{12}{figure.3.1}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {combination of a PF and UKF}}}{12}{figure.3.1}
 \addvspace {10\p@ }

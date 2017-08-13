@@ -12,4 +12,36 @@ Sebastian Thrun, Wolfram Burgard, and Dieter Fox.
 \newblock {\em Probabilistic robotics}.
 \newblock 2005.
 
+\bibitem{fox1999monte}
+Dieter Fox, Wolfram Burgard, Frank Dellaert, and Sebastian Thrun.
+\newblock Monte carlo localization: Efficient position estimation for mobile
+  robots.
+\newblock {\em AAAI/IAAI}, 1999(343-349):2--2, 1999.
+
+\bibitem{rofer2005particle}
+Thomas R{\"o}fer, Tim Laue, and Dirk Thomas.
+\newblock Particle-filter-based self-localization using landmarks and directed
+  lines.
+\newblock In {\em Robot Soccer World Cup}, pages 608--615. Springer, 2005.
+
+\bibitem{BHumanCodeRelease2010}
+Thomas R{\"o}fer, Tim Laue, Judith M{\"u}ller, Armin Burchardt, Erik Damrose,
+  Alexander Fabisch, Fynn Feldpausch, Katharina Gillmann, Colin Graf,
+  Thijs~Jeffry de~Haas, Alexander H{\"a}rtl, Daniel Honsel, Philipp Kastner,
+  Tobias Kastner, Benjamin Markowsky, Michael Mester, Jonas Peter, Ole Jan~Lars
+  Riemann, Martin Ring, Wiebke Sauerland, Andr{\'e} Schreck, Ingo
+  Sieverdingbeck, Felix Wenk, and Jan-Hendrik Worch.
+\newblock B-human team report and code release 2010, 2010.
+\newblock Only available online:
+  \url{http://www.b-human.de/downloads/bhuman10_coderelease.pdf}.
+
+\bibitem{BHumanCodeRelease2012}
+Thomas R{\"o}fer, Tim Laue, Judith M{\"u}ller, Michel Bartsch, Malte~Jonas
+  Batram, Arne B{\"o}ckmann, Nico Lehmann, Florian Maa{\ss}, Thomas M{\"u}nder,
+  Marcel Steinbeck, Andreas Stolpmann, Simon Taddiken, Robin Wieschendorf, and
+  Danny Zitzmann.
+\newblock B-human team report and code release 2012, 2012.
+\newblock Only available online:
+  \url{http://www.b-human.de/wp-content/uploads/2012/11/CodeRelease2012.pdf}.
+
 \end{thebibliography}
