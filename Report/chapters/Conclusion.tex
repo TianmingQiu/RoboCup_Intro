@@ -1,20 +1,17 @@
 \chapter{Conclusion}
-\section{Results}
-In the preliminary game with the other team, we lose the game of 2:3, as our striker are not working properly. After a long time tuning and testing, we fixed the existing problems for calibration and localization and implemented our new behavior for the defender and striker. As a result, in the last game on the presentation day, our yellow team beat the other team with 2:0.
-\section{Suggestion for the future work}
-Although there are already some nice improvement this semester, more work need to be done in the future to get better performance. Here are two main ideas for the role behavior improvement for the future:
-\begin{itemize}
-    \item Dynamic role assignment
-    \item ``Intelligent'' choice of kick direction
-\end{itemize}
-\subsection{Dynamic role assignment}
-The situation of a real game changes really fast. To achieve better result, the dynamic role assignment needs to be implemented. More concretely, the robots will decide by himself which role he is playing. If the position of the defender is over the supporter, their roles could be exchanged immediately. So the original defender don't need to wasting time going back and the original supporter don't need to going forward again to keep their ``set'' behavior. In addition, if the supporter is ahead of striker by some reason, he should automatically work as the striker as in that situation he can score easier.
-With this improvement, the team will work more efficiently and more dynamic strategies can be found.
-\subsection{``Intelligent'' choice of kick direction}
-The proposed method in Section~\ref{sec:Striker} is already a nice improvement over the original kick direction. But if the opponent goal-keeper react quickly and strongly enough, he may still be able to stop it. As shown in \fref{fig:IntKik}, the direction of the kicking should be determined by calculating the distance of the goalkeeper to different goal posts(marked with red dotted lines). If the goalkeeper is near to the left post like the shown graph, the kicking direction should be the right goal post. With this method the goalkeeper will not be able to stop the ball as he is already too far away from the other goal post.
-\begin{figure}[!htb]
-    \includegraphics[scale = 0.3]{pics/striker_future}
-    \centering
-    \caption{``Intelligent'' choice of kick direction}
-    \label{fig:IntKik}
-\end{figure}
+\section{Result and Comparison}
+Before the robot always gets lost and cannot go to the assigned area, such as defending area for defender even at the begining of match. After using PnP pose estimation method, the accuracy of pose calculation has been improved. The self-localization process is much more quick and robost. Averagely, the robot NAO could go to the specific position from initial position out of the border in 30 seconds. 
+The current method which based on only one pair of cooresponding points will be less computation cost but it does not consider the tilting pose of the robot body and rotating of the robot head as well as its camera. However the precise localization of robot is more important and the result will be fed to both unscented Kalman filters and particle filter, which will further affect the self-localization.
+\section{Future Work}
+\subsection{Come up with a more adequate noise model}
+This semester we focused on the visual odometry part, just the sensor measurement of the both two filter method. The motion model also plays an important role on the localization and is restricted with noise comes from actuators of each joint as well as the ground friction at the same time. So in the future, this part of work should be done and set up a more proper and sceintifc noise model to describe the uncertainty of motion model.
+
+\subsection{Search for ball}
+There is still some problem of searching for the ball, this part belongs not to the localization problem, but a tracking problem. 
+
+\subsection{Data asscocaition error}
+According to the both cuurent method and PnP pose estimation method, the correctness of data association determines the final quality of self-localization directly. Wheather the current data asscociation robust enough and which noise comes from, these issues should be more discussed.
+
+\subsection{Communication with another robots}
+This semster we only operate on each single robot without communication with another team players. The communication is very useful and it can gather more information and more fast. For example, if one of the robot has seen the ball, it could `tell' other robot where the ball is. Then the other robot will not implement the ball search task any more and do another more efficeint job. Furthermore, if two robot detect the ball at the same time, they could make a data fusion through communication to improve the accuracy.
+

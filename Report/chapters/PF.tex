@@ -16,16 +16,18 @@ The posterior of each particle $x_t^{m} (with 1 \leq m \leq M)$ is the probalbil
 \subfigure[Particle filter]{
 \label{Ffc.sub.1}
 \includegraphics[width=0.3\textwidth]{pics/PF.jpg}}
-\subfigure[combination of a PF and UKF]{
+\subfigure[combine PF and UKF]{
 \label{Ffc.sub.2}
 \includegraphics[width=0.3\textwidth]{pics/cpf.jpg}}
 \caption{Self-localization based on particle filter flowchart}
 \label{ffc}
 \end{figure}
 
-\section{Unscented Kalman Filter}
+\section{Combination with Unscented Kalman Filter}
 Since 2012, B-Human framewrok made a big change on self-localization: a combination of a particle filter and an Unscented Kalman filter is used.
 The former computes a global position estimate; the latter performs local tracking for refining the global estimate \cite{BHumanCodeRelease2012}. 
-This implementation will improve the local accuracy of particle filter and further results in improvement of localization precision. The change has shown in the \fref{Ffc.sub.1}. 
+This implementation will improve the local accuracy of particle filter and further results in improvement of localization precision. The change has shown in the \fref{Ffc.sub.2}. 
 
-The idea behind the Unscented Kalman filter is similar to the original Kalman filter. However it is applied for the non-linear motion model and provides priciser result than Extented Kalman filter which uses first order approximation of Talor seires. It generates sigma points and uses the unscented transform to describe the non-linearity. The mean as well as covariance of states will also be modified with measurement and finally be returned.
+The idea behind the Unscented Kalman filter is similar to the original Kalman filter. However it is applied for the non-linear motion model and provides priciser result than Extented Kalman filter which uses first order approximation of Talor seires. It generates sigma points and uses the unscented transform to describe the non-linearity. The mean as well as covariance of states will also be modified with measurement and finally be returned. 
+
+Generally, the localization process will use particle filter to estimate the robot pose and each particle will use unscented Kalman filter to update the pose of the sample.

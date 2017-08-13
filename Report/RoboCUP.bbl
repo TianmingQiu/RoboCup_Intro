@@ -22,7 +22,7 @@ Dieter Fox, Wolfram Burgard, Frank Dellaert, and Sebastian Thrun.
 Thomas R{\"o}fer, Tim Laue, and Dirk Thomas.
 \newblock Particle-filter-based self-localization using landmarks and directed
   lines.
-\newblock In {\em Robot Soccer World Cup}, pages 608--615. Springer, 2005.
+\newblock pages 608--615. Springer, 2005.
 
 \bibitem{BHumanCodeRelease2010}
 Thomas R{\"o}fer, Tim Laue, Judith M{\"u}ller, Armin Burchardt, Erik Damrose,
@@ -43,5 +43,17 @@ Thomas R{\"o}fer, Tim Laue, Judith M{\"u}ller, Michel Bartsch, Malte~Jonas
 \newblock B-human team report and code release 2012, 2012.
 \newblock Only available online:
   \url{http://www.b-human.de/wp-content/uploads/2012/11/CodeRelease2012.pdf}.
+
+\bibitem{hartley2003multiple}
+Richard Hartley and Andrew Zisserman.
+\newblock {\em Multiple view geometry in computer vision}.
+\newblock Cambridge university press, 2003.
+
+\bibitem{ETHPnP}
+Simon Fl{\"u}ckiger.
+\newblock Self-localization on nao robots based on external features: Pnp pose
+  estimation, 2016.
+\newblock Only available online:
+  \url{https://drive.google.com/file/d/0B8OEfzrd1JHkbkNqMkJYT0tZbUk/view}.
 
 \end{thebibliography}
