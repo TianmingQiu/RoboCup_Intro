@@ -1,12 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{BHumanCodeRelease2015}
-Thomas R{\"o}fer, Tim Laue, Jesse Richter-Klug, Maik Sch{\"u}nemann, Jonas
-  Stiensmeier, Andreas Stolpmann, Alexander St{\"o}wing, and Felix Thielke.
-\newblock {B}-{H}uman team report and code release 2015, 2015.
-\newblock Only available online:
-  \url{http://www.b-human.de/downloads/publications/2015/CodeRelease2015.pdf}.
-
 \bibitem{thrun2005probabilistic}
 Sebastian Thrun, Wolfram Burgard, and Dieter Fox.
 \newblock {\em Probabilistic robotics}.

@@ -3,6 +3,7 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Self-localization based on particle filter flowchart}}{8}{figure.2.1}
 \contentsline {subfigure}{\numberline {(a)}{\ignorespaces {Particle filter}}}{8}{figure.2.1}
 \contentsline {subfigure}{\numberline {(b)}{\ignorespaces {combine PF and UKF}}}{8}{figure.2.1}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Unscented Kalman filter}}{9}{figure.2.2}
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Pinhole camera model}}{12}{figure.3.1}
 \contentsline {figure}{\numberline {3.2}{\ignorespaces Pose estimation}}{13}{figure.3.2}

@@ -24,10 +24,16 @@ The posterior of each particle $x_t^{m} (with 1 \leq m \leq M)$ is the probalbil
 \end{figure}
 
 \section{Combination with Unscented Kalman Filter}
+\begin{figure}[!htb]
+    \includegraphics[width=0.36\textwidth]{pics/ukf.jpg}
+    \centering
+    \caption{Unscented Kalman filter}
+    \label{fig: ukf}
+\end{figure}
 Since 2012, B-Human framework made a big change on self-localization: a combination of a particle filter and an Unscented Kalman filter is used.
 The former computes a global position estimate; the latter performs local tracking for refining the global estimate \cite{BHumanCodeRelease2012}. 
-This implementation will improve the local accuracy of particle filter and further results in improvement of localization precision. The change has shown in the \fref{Ffc.sub.2}. 
+This implementation will improve the local accuracy of particle filter and further results in improvement of localization precision. The change has shown in the \fref{Ffc.sub.2} . 
 
-The idea behind the Unscented Kalman filter is similar to the original Kalman filter. However it is applied for the non-linear motion model and provides priciser result than Extented Kalman filter which uses first order approximation of Talor seires. It generates sigma points and uses the unscented transform to describe the non-linearity. The mean as well as covariance of states will also be modified with measurement and finally be returned. 
+The idea behind the Unscented Kalman filter is similar to the original Kalman filter. However it is applied for the non-linear motion model and provides priciser result than Extented Kalman filter which uses first order approximation of Talor seires. It generates sigma points and uses the unscented transform to describe the non-linearity. Since the state of pose could be represented as $(x,y,\theta)^T$, it contains three dimensions, then the number of sigma points for each state is $2n+1=7$, here $n$ is the dimension number of the state variable. Each sigma points will be predicted by motion model. And due to the non-linearity of motion model, unscented transform will be used.  As shown in \fref{fig: ukf}, the mean as well as covariance of states will also be modified with measurement and finally be returned. 
 
 Generally, the localization process will use particle filter to estimate the robot pose and each particle will use unscented Kalman filter to update the pose of the sample.
