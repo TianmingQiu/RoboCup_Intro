@@ -47,11 +47,11 @@ In the process of transforming the coordinate from camera frame into robot frame
 \end{figure}\\
 
 \section{PnP Pose estimation}
-Since the current method contains the tilting and shaking error so I apply the PnP method \cite{ETHPnP} which could eliminate the error by consider the transform in a more direct way. Reconsidering corresponding point pair $\mathbf{x}:=(x,y,1)^T$ in pixel coordinate and $\mathbf{X}:=(X,Y,0,1)^T$ in 3D global space. They should have this following relationship \eqref{relation}:
+Since the current method contains the tilting and shaking error I apply the PnP method \cite{ETHPnP} which could eliminate the error by considering the transform in a more direct way. PnP means ``Point n Point", which uses $n$ pairs of corresponding point to calculate transform relationship. Reconsidering the corresponding point pair $\mathbf{x}:=(x,y,1)^T$ in pixel coordinate and $\mathbf{X}:=(X,Y,0,1)^T$ in 3D global space. They should have this following relationship \eqref{relation}:
 \begin{equation}
 \mathbf{x} = \mathbf{T}_{image2field} \cdot \mathbf{X}_{field} \label{relation}
 \end{equation}
-And the transform matrix $\mathbf{T}_{image2field}$ could be represented as three parts: 
+And the transform matrix $\mathbf{T}_{image2field} \in \mathfrak{R}^{3 \times 4}$ could be represented as three parts: 
 \begin{equation}
 \mathbf{T}_{image2field}=\mathbf{K} \cdot \mathbf{T}_{camera2robot} \cdot \mathbf{T}_{robot2field} \label{transform}
 \end{equation}
@@ -81,7 +81,7 @@ There are 4 unknown parameters in \eqref{Trf}, so at least 2 pairs of correspond
 \label{Trf3}
 \end{equation}
 
-So, in \eqref{Trf3} it shows the how does two pairs of corresponding points calculate matrix $\mathbf{A}$ which contains four unknown parameters. If we have more than 4 pairs of corresponding points, SVD method for minimum solution finding could be applied.
+So, in \eqref{Trf3} it shows the how did two pairs of corresponding points calculate matrix $\mathbf{A}$ which contains four unknown parameters. If we have more than 4 pairs of corresponding points, SVD method for minimum solution finding could be applied.
 
 
 
