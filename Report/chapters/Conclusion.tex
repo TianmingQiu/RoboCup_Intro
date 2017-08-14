@@ -1,17 +1,17 @@
 \chapter{Conclusion}
 \section{Result and Comparison}
-Before the robot always gets lost and cannot go to the assigned area, such as defending area for defender even at the begining of match. After using PnP pose estimation method, the accuracy of pose calculation has been improved. The self-localization process is much more quick and robost. Averagely, the robot NAO could go to the specific position from initial position out of the border in 30 seconds. 
-The current method which based on only one pair of cooresponding points will be less computation cost but it does not consider the tilting pose of the robot body and rotating of the robot head as well as its camera. However the precise localization of robot is more important and the result will be fed to both unscented Kalman filters and particle filter, which will further affect the self-localization.
+Before the robot always gets lost and cannot go to the assigned area, such as defending area for defender even at the beginning of match. After using PnP pose estimation method, the accuracy of pose calculation has been improved. The self-localization process is much more quick and robust. Averagely, the robot NAO could go to the specific position from initial position out of the border in 30 seconds. 
+The current method which based on only one pair of corresponding points will be less computation cost but it does not consider the tilting pose of the robot body and rotating of the robot head as well as its camera. However the precise localization of robot is more important and the result will be fed to both unscented Kalman filters and particle filter, which will further affect the self-localization.
 \section{Future Work}
 \subsection{Come up with a more adequate noise model}
-This semester we focused on the visual odometry part, just the sensor measurement of the both two filter method. The motion model also plays an important role on the localization and is restricted with noise comes from actuators of each joint as well as the ground friction at the same time. So in the future, this part of work should be done and set up a more proper and sceintifc noise model to describe the uncertainty of motion model.
+This semester we focused on the visual odometry part, just the sensor measurement of the both two filter method. The motion model also plays an important role on the localization and is restricted with noise comes from actuators of each joint as well as the ground friction at the same time. So in the future, this part of work should be done and set up a more proper and scientific noise model to describe the uncertainty of motion model.
 
 \subsection{Search for ball}
 There is still some problem of searching for the ball, this part belongs not to the localization problem, but a tracking problem. 
 
-\subsection{Data asscocaition error}
-According to the both cuurent method and PnP pose estimation method, the correctness of data association determines the final quality of self-localization directly. Wheather the current data asscociation robust enough and which noise comes from, these issues should be more discussed.
+\subsection{Data association error}
+According to the both current method and PnP pose estimation method, the correctness of data association determines the final quality of self-localization directly. Whether the current data association robust enough and which noise comes from, these issues should be more discussed.
 
 \subsection{Communication with another robots}
-This semster we only operate on each single robot without communication with another team players. The communication is very useful and it can gather more information and more fast. For example, if one of the robot has seen the ball, it could `tell' other robot where the ball is. Then the other robot will not implement the ball search task any more and do another more efficeint job. Furthermore, if two robot detect the ball at the same time, they could make a data fusion through communication to improve the accuracy.
+This semester we only operate on each single robot without communication with another team players. The communication is very useful and it can gather more information and more fast. For example, if one of the robot has seen the ball, it could `tell' other robot where the ball is. Then the other robot will not implement the ball search task any more and do another more efficient job. Furthermore, if two robot detect the ball at the same time, they could make a data fusion through communication to improve the accuracy.
 

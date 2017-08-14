@@ -8,13 +8,13 @@
 \contentsline {section}{\numberline {3.1}The current method}{11}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}Visual odometry procedure}{11}{subsection.3.1.1}
 \contentsline {subsection}{\numberline {3.1.2}Current problem}{12}{subsection.3.1.2}
-\contentsline {section}{\numberline {3.2}PnP Pose estimation}{13}{section.3.2}
+\contentsline {section}{\numberline {3.2}PnP Pose estimation}{14}{section.3.2}
 \contentsline {chapter}{\numberline {4}Conclusion}{15}{chapter.4}
 \contentsline {section}{\numberline {4.1}Result and Comparison}{15}{section.4.1}
 \contentsline {section}{\numberline {4.2}Future Work}{15}{section.4.2}
 \contentsline {subsection}{\numberline {4.2.1}Come up with a more adequate noise model}{15}{subsection.4.2.1}
 \contentsline {subsection}{\numberline {4.2.2}Search for ball}{15}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Data asscocaition error}{16}{subsection.4.2.3}
+\contentsline {subsection}{\numberline {4.2.3}Data association error}{16}{subsection.4.2.3}
 \contentsline {subsection}{\numberline {4.2.4}Communication with another robots}{16}{subsection.4.2.4}
 \contentsline {chapter}{List of Figures}{19}{chapter*.2}
 \contentsline {chapter}{Bibliography}{21}{chapter*.3}
