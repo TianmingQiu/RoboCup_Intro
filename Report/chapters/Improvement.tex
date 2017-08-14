@@ -24,7 +24,7 @@ Based on feature detection and data association, the corresponding point pairs h
     \label{fig: camera}
 \end{figure}
 
-So we could get the corresponding 3D goal post coordinate in the ideal camera frame. Since we know the geometrical value of NAO's body construction, we can transform the coordinates into the robot frame, which is shown in the \fref{fig: trans.sub.1}
+So we could get the corresponding 3D goal post coordinate in the ideal camera frame. Since we know the geometrical value of NAO's body construction, we can transform the coordinates into the robot frame, which is shown in the \fref{trans.sub.1}.
 \begin{figure}[tbp]
 \centering
 \subfigure[Coordinate transform]{
@@ -36,7 +36,7 @@ So we could get the corresponding 3D goal post coordinate in the ideal camera fr
 \caption{Pose estimation}
 \label{fig: trans}
 \end{figure}
-Based on this, we could get the related distance between robot and the goal post in robot frame. At the same time, the precise location of goal post in the global field is also known. So we could calculate the robot pose from this above information.
+Based on this, we could get the related distance between robot and the goal post in robot frame, which is shown in the \fref{trans.sub.2}. At the same time, the precise location of goal post in the global field is also known. So we could calculate the robot pose from this above information.
 \subsection{Current problem}
 In the process of transforming the coordinate from camera frame into robot frame, the current method only use a constant transform. However when robot is walking, it cannot always be extremely vertical to the ground. The central line of its body and camera on the head will have an arbitrary angle of tilt. Also due to detecting of the environment, robot always turn around its head or even look up and down, but this information will also create bias by coordinate transforming. Then it will cause a bias on the camera frame transform, which is shown in \fref{fig: error}. This error between the real robot base coordinate and the result calculated by the constant transform will further affect the pose estimation. 
 \begin{figure}[!htb]
