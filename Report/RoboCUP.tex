@@ -30,11 +30,11 @@
 \pagenumbering{arabic}
 \phantom{u}
 \begin{abstract}
-RoboCup is a competition for soccer robot held annually, which aims at promoting researches on robot and artificial intelligence. We work on the RoboCup Standard Platform League (SPL) by using humanoid robot NAO, based on the code framework from University of Bremen's team BHuman.
+RoboCup is a competition for soccer robot held annually and we work on the RoboCup Standard Platform League (SPL) by using humanoid robot NAO, based on the code framework from University of Bremen's team B-Human.
 
-Self-localization is a very important task for NAO during the game. The action decisions, ball tracking and different team cooperation strategies are dependent on the precise location on the standard soccer field. Self-localization is also related computer vision and statistical signal processing. These topics are the foundations of autonomous robot. So this semester I focus on figuring it out, how does NAO localize itself on the soccer field by cameras and how could it be improved.
+Self-localization is a very important task for NAOs during the match. The action decisions, ball tracking and different team cooperation strategies are dependent on the precise location on the standard soccer field. Self-localization is also related computer vision and statistical signal processing. These topics are the foundations of autonomous robot. So this semester I focus on figuring it out, how does NAO localize itself on the soccer field by cameras and how could it be improved.
 
-The current method in BHuman framework has been continuously developed, verified and implemented for several years and it has been considered as state-of-the-art method which is already very robust and compact. The main idea is to apply particle filter to estimate robot pose. But there are still some issues that when robot is walking, some shake noises from camera will cause deviations in visual odometry.
+The current method in B-Human framework has been continuously developed, verified and implemented for several years. It has been considered as state-of-the-art method which is already very robust and compact. The main idea is to apply particle filter with unscented Kalman filter for each particle to estimate robot pose. But there are still some issues that when robot is walking, some shake noises from camera will cause deviations in visual odometry. PnP pose estimate would be adopted instead of relative distance calculation, which would take all the transform generally into consideration and eliminates the error.
 \end{abstract}
 
 % %%%%%%%%%%%%%%%%%%%%% Widmung %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
