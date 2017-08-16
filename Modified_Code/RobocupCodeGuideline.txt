@@ -1,0 +1,75 @@
+﻿* walkingEngine.cfg: (Vector2f) standArmJointAngles - The joint angles of the left arm when standing
+standArmJointAngles = {x = -0.3; y = -0.6;};
+  ArmMotionSelection.h
+
+* UKFSample.cpp:	line 434: poseSensorUpdate()
+		 	line 200: void UKFSample::updateByLinePercept
+			line 208: Vector2f circleInWorld = robotPose * linePercept.circle.pos;
+
+* SelfLocator.cpp 	line 267: void SelfLocator::sensorUpdate()  main part: line 326
+
+	line 46: 
+	Pose2f UKFSample::getPose() const
+	{
+	  return Pose2f(mean.z(), mean.head<2>());
+	}
+	
+	The BHuman just use the mean value but i want to loosen them and to find optimal one
+
+* Body.cpp lines 301:
+
+	const Pose3<>& Body::getPose()
+	{
+	  ODETools::convertVector(dBodyGetPosition(body), pose.translation);
+	  ODETools::convertMatrix(dBodyGetRotation(body), pose.rotation);
+	  pose.translate(-centerOfMass);
+	  return pose;
+	}
+
+* whether the robot knows its original position at very begining?
+
+* FieldModel.cpp line 123: bool FieldModel::getAssociatedKnownGoalPost 这段写数据关联其实挺清晰的
+  问题在这：postInWorld = robotPose * goalPercept;circleInWorld = robotPose * linePercept.circle.pos;
+  这个乘法是什么意思？
+
+* selfLocator.cpp line 223:   	robotPose.translation = resultPose.translation;
+  				robotPose.rotation = resultPose.rotation;
+  这块好像在更新Pose这个sturcture里的各个参 @param robotPose The robot pose representation that is updated by this module.
+
+* Geometry.cpp line 690: Robotpose       *
+
+
+* Robotpose.cpp
+
+* SPLstandardMessage.cpp line 116: RobotPoseCompressed robotPose;
+
+* TemplateGenerate.cpp	line 374: float postDist = posSeen.norm();
+  			float postDistUncertainty = sampleTriangularDistribution
+			它在此处用了一个三角形概率分布来描述误差，一种近似高斯的模型
+			line 369: generateTemplateFromPositionAndCenterCircle()
+
+* goalpercept.h   (Vector2i) positionInImage, /**< The position of the goal post in the current image */
+  		  (Vector2f) positionOnField, /**< The position of the goal post relative to the robot*/
+
+* Src/Tools/Math/Transform.cpp: 所有重要的坐标转换均在此
+  line 42 bool Transformation::imageToRobot(const float x, const float y, const CameraMatrix& cameraMatrix,
+                                  const CameraInfo& cameraInfo, Vector2f& relativePosition)
+  某点P在图像坐标中的位置，转换到相对机器人自身坐标下
+
+* RobotCameraMatrixProvider.cpp 计算从照相机到机器人的变换
+void RobotCameraMatrixProvider::update(RobotCameraMatrix& robotCameraMatrix)
+{
+  robotCameraMatrix.computeRobotCameraMatrix(theRobotDimensions, theJointAngles.angles[Joints::headYaw], theJointAngles.angles[Joints::headPitch], theCameraCalibration, theCameraInfo.camera == CameraInfo::upper);
+}
+
+* CameraMatrix.cpp line 281 void RobotCameraMatrix::computeRobotCameraMatrix(const RobotDimensions& robotDimensions, float headYaw, float headPitch, const CameraCalibration& cameraCalibration, bool upperCamera)
+  translate(0., 0., robotDimensions.hipToNeckLength);//就是这里？取常量其实是一种近似
+  rotateZ(headYaw);
+  rotateY(headPitch);
+
+
+* 一些可以用来debug的句子：TorsoMatrixProvider.cpp line 74: PLOT("module:TorsoMatrixProvider:torsoMatrixX", torsoMatrix.translation.x());
+
+	CameraCalibrator.cpp line 190: DECLARE_DEBUG_DRAWING("module:CameraCalibrator:drawFieldLines", "drawingOnImage");
+
+* PoseComputation.cpp computePoseFromTwoGoalposts!!利用数据关联得到的真实位置反推机器人当前位置
