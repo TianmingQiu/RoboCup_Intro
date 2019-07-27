@@ -1,0 +1,110 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{url}
+\usepackage[margin=1in]{geometry} 
+
+\input{./include/macros.tex}
+
+\title{Robocup Tutorial: Flash the Robot}
+
+\author{Mohsen Kaboli, Tianming Qiu}
+
+\date{\today}
+
+\begin{document}
+\maketitle
+
+
+
+\section{Flashing the Robot}
+This part is provided for a  new robot. Although all robots have already been flashed, it is meaningful to do everything from scratch again to understand the whole procedure.
+
+\subsection{Preparing the USB and flashing}
+All the tools and image file that we need are in the Gitlab repository/Softwares.\\
+And please prepare an empty USB disk which will be written the atom system image file.\\ 
+The atom system image and corresponding \textit{Flasher} should be downloaded from \url{https://community.aldebaran.com}. Then the following steps should be done:
+\begin{itemize}
+    \item Extract the \textit{Flasher} and execute
+    \begin{lstlisting}
+cd <Flasher>
+sudo ./flasher
+    \end{lstlisting}
+    \item \textit{Factor reset} should be chosen before flashing.
+    \item Click the ``write" button and wait for 2 minutes it will finish the writing.
+    \item Make sure the NAO is turned off before you plug in the USB disk.
+    \item Plug the USB to the backside of NAO and press the chest button until the chest turns blue(around 5 seconds).
+    \item The installation process will start and be monitored by the LED lights around NAO's ears. It takes around 10 minutes. 
+    \item When finished, the chest button should be pressed and NAO will tell its initial IP-Address. Note down the IP-Address for future  use. If it doesn't speak the IP address just wait for one minute and press the chest button again. It always takes time to initialize the system. It may rotate the head randomly and seems to track your face, so you can remove the USB disk to prevent breaking down your USB disk.
+\end{itemize}
+More details for the flashing procedure can be found at \url{http://doc.aldebaran.com/2-1/nao/boot_process_nao.html#upgrading-process-nao}.
+
+\subsection{Create the robot}
+Before creating the robot, configure  $AAA.BBB$ in template file \emph{wired}(Line 6) in \emph{Install/Network}.\\
+Each robot has its unique IP-Address, which looks like $AAA.BBB.CCC.DDD$ (IPv4 IP-Address). Here, we set $AAA = 169, BBB=254$ for all robots' wired configuration (For wireless settings, we set $AAA=10, BBB=0$). And $CCC$ is for the team ID and $DDD$ for robot ID. For example, $169.254.29.173$ is the robot $173$ from team $29$.  In addition, we should also assign a nickname to it such as \emph{Neue}.
+
+Then the new robot can be created like:
+\begin{lstlisting}
+cd <BHuman-CodeRelease>/Install
+./createRobot -t CCC -r DDD <nickname> # CCC.DDD should be the IP address on the robot leg, the target IP address.
+./addRobotIds -ip <Initial IP-Address> <nickname> # The initial IP address which NAO speaks out
+\end{lstlisting}
+This step is very important, it will create the file robot.cfg.
+\subsection{Conguration of the Network}
+The robot can only be connected with cables after reflashing. 
+\begin{itemize}
+\item Connect the robot with the computer and add a \emph{Ethernet Connection}. 
+\item Set the \emph{method} in \emph{IPv4 Settings} as \emph{link-local only}. 
+\item Now the computer could connect with the robot. Try 
+\begin{lstlisting}
+ssh nao@<Initial IP-Address>
+\end{lstlisting}
+to check the reachablity of the robot. The IP-Address is the one given by Nao after flashing.
+If it doesn't work add sudo before the command.
+\end{itemize}
+
+
+\subsection{Copy the compiled code to robots}
+After connecting to the robot successfully, we can install the robot and copy the complied code to it.\\ 
+To do this, it can be done with
+\begin{lstlisting}
+cd <BHuman-CodeRelease>/Install
+./installRobot <initial IP-Address> # Pay attention! Initial IP address!!
+\end{lstlisting}
+Follow the instruction in the terminal, e.g. just enter the password ``root" when it requires.
+After this step, the robot IP-Address will be changed into $AAA.BBB.CCC.DDD$. (The one you assigned)\\
+Reconnet the robot with \emph{ssh} and copy the compiled code to robot with:
+\begin{lstlisting}
+cd <BHuman-CodeRelease>/Make/Linux
+./copyfiles Develop AAA.BBB.CCC.DDD -r
+\end{lstlisting}
+More options for the command $copyfiles$ can be found in \cite{BHuman2015}(cf. 2.5)
+\subsection{Setting up the wireless configuration}
+To set up the wireless configuration, the files in \emph{Install/Network/Profiles} should be configured. Create  a new \emph{NAOwifi.wpa} file, the syntax can be referred from the \emph{example.wpa} file. One example looks like
+\begin{lstlisting}
+ctrl_interface=/var/run/wpa_supplicant
+ctrl_interface_group=0
+ap_scan=1
+
+network={
+  ssid="NAOSWIFI"
+  key_mgmt=WPA-PSK
+  pairwise=TKIP # Pay attention! Here should be modified as TKIP
+  group=TKIP
+  psk="naoapp99"
+}
+
+\end{lstlisting}
+Then the wireless profiles can be updated with 
+\begin{lstlisting}
+cd <BHuman-CodeRelease>/Make/Linux
+./copyfiles Develop AAA.BBB.CCC.DDD -w NAOwifi.wpa
+\end{lstlisting}
+Plug out the cable and connect to the WIFI (\emph{NAOSWIFI}) with the password \emph{naoapp99}. Now you should be able to connect with the robot through \emph{ssh} command.
+\clearpage
+
+\end{document}

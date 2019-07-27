@@ -1,0 +1,70 @@
+% using the todonotes package in some nice ways (see packages.tex)
+\newcommand{\add}[2][]{\todo[color=blue!40,#1]{#2}{}}
+\newcommand\optional[2][]{\todo[inline, color=cyan!40, caption={2do},
+	#1]{\begin{minipage}{\textwidth-4pt}#2\end{minipage}}{}}
+
+% math macros
+\newcommand{\set}[1]{\boldsymbol{#1}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+
+% % commands for easy referencing
+\newcommand{\fref}[1]{Figure~\ref{#1}}
+\newcommand{\tref}[1]{Table~\ref{#1}}
+\newcommand{\eref}[1]{Equation~\ref{#1}}
+\newcommand{\cref}[1]{Chapter~\ref{#1}}
+\newcommand{\sref}[1]{Section~\ref{#1}}
+\newcommand{\aref}[1]{Appendix~\ref{#1}}
+
+% fancy source code listings: http://stackoverflow.com/questions/741985/latex-source-code-listing-like-in-professional-books
+% usage: \lstinputlisting[label=samplecode,caption=A sample]{sourceCode/HelloWorld.java}
+\definecolor{light-gray}{gray}{0.95}
+\usepackage{listings}
+\usepackage{courier}
+\lstset{
+         basicstyle=\footnotesize\ttfamily, % Standardschrift
+         numbers=left,               % Ort der Zeilennummern
+         numberstyle=\tiny,          % Stil der Zeilennummern
+         stepnumber=0,               % Abstand zwischen den Zeilennummern
+         numbersep=5pt,              % Abstand der Nummern zum Text
+         tabsize=2,                  % Groesse von Tabs
+         extendedchars=true,         %
+         breaklines=true,            % Zeilen werden Umgebrochen
+         keywordstyle=\color{red},
+         stringstyle=\color{white}\ttfamily, % Farbe der String
+         showspaces=false,           % Leerzeichen anzeigen ?
+         showtabs=false,             % Tabs anzeigen ?
+         xleftmargin=0pt,
+         framexleftmargin=10pt,
+         framexrightmargin=10pt,
+         framexbottommargin=0pt,
+         backgroundcolor=\color{light-gray},
+         showstringspaces=false      % Leerzeichen in Strings anzeigen ?
+}
+
+\lstdefinestyle{customc}{
+  	belowcaptionskip=1\baselineskip,
+  	breaklines=true,
+  	%frame=L,
+  	language=BASH,
+  	showstringspaces=false,
+ 	basicstyle=\footnotesize\ttfamily\color{blue!40!black},
+ 	keywordstyle=\bfseries\color{green!40!black},
+  	commentstyle=\itshape\color{purple!40!black},
+  	%identifierstyle=\color{blue}, %color of actual code
+ 	stringstyle=\color{orange},
+    numbers=left,               % Ort der Zeilennummern
+    numberstyle=\tiny,          % Stil der Zeilennummern
+    stepnumber=2,               % Abstand zwischen den Zeilennummern
+    numbersep=5pt,              % Abstand der Nummern zum Text
+    tabsize=2,                  % Groesse von Tabs
+    extendedchars=true,         %
+    showspaces=false,           % Leerzeichen anzeigen ?
+    showtabs=false,             % Tabs anzeigen ?
+  	xleftmargin=\parindent,
+    framexleftmargin=10pt,
+    framexrightmargin=10pt,
+    framexbottommargin=0pt,
+    backgroundcolor=\color{light-gray},
+}
+
+\lstset{style=customc}% i have deleted "escapechar=@,"
